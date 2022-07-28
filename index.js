@@ -30,7 +30,7 @@ const createProduct = async () => {
   //Escrevendo no arquivo ./products e cadastrando o novo produto
   await fs.writeFile(file, JSON.stringify(arrProducts))
 
-  console.log(`${nome} cadastrado com sucesso!`)
+  return `${nome} cadastrado com sucesso!`
 }
 
 const removeProduct = async () => {
@@ -43,7 +43,7 @@ const removeProduct = async () => {
 
   // Escrendo no arquivo ./products e removendo o produto da lista
   await fs.writeFile(file, JSON.stringify(filter))
-  console.log('Produto removido com sucesso !')
+  return 'Produto removido com sucesso !'
 }
 
 const main = () => {
@@ -56,4 +56,10 @@ const main = () => {
   }
 }
 
-main();
+
+module.exports = {
+  readProducts,
+  removeProduct,
+  createProduct,
+  main
+}
