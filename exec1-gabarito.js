@@ -1,11 +1,12 @@
 const myNumber = (number) => {
+  if (typeof number !== 'number') return 'O valor deve ser um número'
+
   switch (true) {
-    case typeof number !== 'number': 'O valor deve ser um numero'
     case number > 0: return 'positivo'
-    case number === 0: return 'neutro'
     case number < 0: return 'negativo'
-    default: undefined;
-  };
-};
+    case number === 0: return 'neutro'
+    default: return undefined;
+  }
+}
 
 module.exports = myNumber;

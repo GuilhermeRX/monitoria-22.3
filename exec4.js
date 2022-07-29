@@ -1,8 +1,8 @@
 const fs = require('fs').promises;
 
-const write = async (name, string) => {
-  await fs.writeFile(name, string)
-  return 'ok'
-}
+const write = async (name, conteudo) => {
+  await fs.writeFile(name, conteudo);
+  return 'ok';
+};
 
-module.exports = write
+module.exports = write;

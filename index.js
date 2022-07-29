@@ -8,7 +8,7 @@ const option2 = '2 - Remover um produto'
 const readProducts = async () => {
   const products = await fs.readFile(file, 'utf-8');
   return JSON.parse(products);
-}
+};
 
 const createProduct = async () => {
   const nome = rl.question('Nome do Produto que deseja cadastrar ? \n ')
@@ -52,9 +52,11 @@ const main = () => {
   switch (option) {
     case 1: return createProduct();
     case 2: return removeProduct();
-    default: undefined
+    default: undefined;
   }
 }
+
+main();
 
 
 module.exports = {

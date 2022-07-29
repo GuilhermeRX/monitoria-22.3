@@ -1,4 +1,4 @@
-const write = require("../../exec4")
+const write = require("../../exec4-gabarito")
 const sinon = require('sinon');
 const fs = require('fs').promises;
 const { expect } = require("chai");
